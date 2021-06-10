@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    background-color: #adb3bf;
+    color: #333538;
+    animation-name: animate;
+    animation-duration: 3s;
+    padding: 10px;
+}
+
+.main {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 7px;
+    margin: 0px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-container {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flash {
+    width: 100%;
+    background-color: #97eb97;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.flash-show {
+    display: block;
+    animation-name: animate;
+    animation-duration: 1s;
+}
+
+
+.flash-msg {
+    color: #137213;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    list-style: none;
+}
+
+.header {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.forms {
+    width: 100%;
+}
+
+.form {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+    animation-name: animate;
+    animation-duration: 1s;
+}
+
+.input {
+    width: calc(100% - 70px);
+    padding: 8px 10px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+
+.btn {
+    width: 70px;
+    padding: 10px 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgb(50, 119, 175);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+    margin-left: -8px;
+    transition: 0.4s ease-in;
+}
+
+.btn:hover {
+    background-color: #185586;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.edit-mode {
+    opacity: 0.6;
+}
+
+.list-item {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: poppins, sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    pointer-events: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.edit, .delete {
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    outline: none;
+    padding: 3px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+
+.delete {
+    color: #f52d2d;
+}
+
+.edit {
+    color: #185586;
+    margin-right: 7px;
+}
+
+.edit:hover, .delete:hover {
+    background-color: #9d9fa1;
+}
+
+.clear {
+    border: solid 1px #9d9fa1;
+    color: #e93a3a;
+    font-family: inherit;
+    width: 110px;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.clear:hover {
+    background-color: #ce3b3b;
+    color: white;
+    border: none;
+    padding: 8px;
+}
+
+@keyframes animate {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media (max-width: 300px) {
+    .main-container {
+        padding: 25px 10px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+
+    .list-item {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .input {
+        width: calc(100% - 55px);
+    }
+
+    .btn {
+        width: 55px;
+        font-size: 15px;
+    }
+
+    .buttons {
+        margin: 0;
+    }
+
+    .edit {
+        margin-right: 3px;
+    }
+
+    .clear {
+        font-size: 14px;
+        width: 100px;
+        padding: 6px;
+    }
+}
